@@ -72,13 +72,58 @@
                 <div id="options"></div>
                 <div id="examples">
                     <code>
-                        $('#example1').tableBlock({
-                        JSONHead:JSONHead,
-                        JSONData:JSONData,
-                        tableRowsOnPage:5
+                        $('#example1').tableBlock({<br>
+                        JSONHead:JSONHead,<br>
+                        JSONData:JSONData,<br>
+                        tableRowsOnPage:5<br>
                         });
                     </code>
                     <div id="example1"></div>
+
+                    <code>
+                        $('#example2').tableBlock({<br>
+                        JSONHead:JSONHead,<br>
+                        JSONData:JSONData,<br>
+                        tableRowsOnPage:5,<br>
+                        getSelectedHtml:function(countRows, startRows, endRows){<br>
+                        if (countRows == 0){<br>
+                        return  '&lt;label>&lt;span>Ничего не найдено&lt;/span>&lt;/label>';<br>
+                        }else{<br>
+                        return '&lt;label>&lt;span>Выбранны страницы с '+startRows+' по '+endRows+'  из '+countRows+'&lt;/span>&lt;/label>';<br>
+                        }<br>
+                        },<br>
+                        getCellData:function(x, y, value){<br>
+                        if (x==2 && y ==3){<br>
+                        return '&lt;td class="tableUiData">Changed value =&lt;a href="">'+value+'&lt;/a>&lt;/td>';<br>
+                        }else{<br>
+                        return '&lt;td class="tableUiData">'+value+'&lt;/td>';<br>
+                        }<br>
+                        },<br>
+                        positionRowsOnPage:'',<br>
+                        positionListing:'bl',<br>
+                        positionSelected: 'br',<br>
+                        positionButtonBox: ''<br>
+                        });<br>
+                    </code>
+
+                    <div id="example2"></div>
+                    <code>
+                        $('#example3').tableBlock({<br>
+                        JSONHead:JSONHead,<br>
+                        JSONData:JSONData,<br>
+                        tableRowsOnPage:20,<br>
+                        positionRowsOnPage:'',<br>
+                        positionListing:'',<br>
+                        positionSelected: '',<br>
+                        positionButtonBox: '',<br>
+                        positionLabel:'tc',<br>
+                        scroll:'y',<br>
+                        heightTableContent:'150px',<br>
+                        labelText:'scroll-y',  <br>
+                        highlighting: true<br>
+                        });
+                    </code>
+                    <div id="example3"></div>
                 </div>
                 <div id="download">
                     <a href="http://github.com/lexecon/jquery-ui-table/zipball/master">

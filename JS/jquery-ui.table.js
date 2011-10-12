@@ -374,7 +374,7 @@
                 }
                 table += "</tr>";
                 var x =0;
-                var y = 0;
+                var y = this._curPage*this._rowsOnPage;
                 for (i = countColumn*this._rowsOnPage*this._curPage;i< this._Data.length && i <countColumn*this._rowsOnPage+(countColumn*this._rowsOnPage*this._curPage); i+=countColumn){
                     table += "<tr>";
                     for (var j = i;j<i + countColumn;j++){
