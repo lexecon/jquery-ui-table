@@ -10,25 +10,31 @@
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
-
+.tableHead{
+    height:0;
+    overflow:hidden
+}
 table .tableUiHead{
     font-size: 11pt;
     font-weight: bold;
-    margin:0 !important;
-    padding:0 !important;
+    margin:0;
+    padding:0;
     text-align: center;
+    background:#C4C3C3;
 }
 table .tableUiData{
     font-size: 10pt;
-    margin:0 !important;
-    padding:0 !important;
+    margin:0;
+    padding:0;
     text-align: center;
 }
 .buttonPadding {
     padding: 2px 5px !important;
     margin:0 !important;
 }
-.tlTemplate select {
-    font-size: 13px !important;
+.rowHower{
+    background:#eeeeee;
+}
+.tableContent {
 }
 
