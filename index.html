@@ -9,11 +9,11 @@
         <script type="text/javascript" src="JS/jquery.js"></script>
         <script type="text/javascript" src="JS/jquery-ui.js"></script>
         <script type="text/javascript" src="JS/jquery-ui.table.js"></script>
-        <script type="text/javascript" src="../javascript/index.js"></script>
+        <script type="text/javascript" src="JS/index.js"></script>
     </head>
 
     <body>
-        <a href="http://github.com/lexecon/jquery-ui-table"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+        <!--<a href="http://github.com/lexecon/jquery-ui-table"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
         <div id="container">
 
@@ -55,7 +55,38 @@
         </div>
 
     </div>
-
-
-</body>
+        -->
+        <div id="content" class="ui-widget-content ui-corner-all">
+            <div id="Head">
+                <h1>jquery-ui.table</h1>
+                <a href="http://github.com/lexecon/jquery-ui-table"><img style="position: absolute; height:120px; top: -10px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+            </div>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#overview">Обзор</a></li>
+                    <li><a href="#options">Опции</a></li>
+                    <li><a href="#examples">Примеры</a></li>
+                    <li><a href="#download">Загрузка</a></li>
+                </ul>
+                <div id="overview"></div>
+                <div id="options"></div>
+                <div id="examples">
+                    <code>
+                        $('#example1').tableBlock({
+                        JSONHead:JSONHead,
+                        JSONData:JSONData,
+                        tableRowsOnPage:5
+                        });
+                    </code>
+                    <div id="example1"></div>
+                </div>
+                <div id="download">
+                    <a href="http://github.com/lexecon/jquery-ui-table/zipball/master">
+                        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+                    <a href="http://github.com/lexecon/jquery-ui-table/tarball/master">
+                        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
