@@ -34,6 +34,7 @@
             positionLabel:'',
             tableHead: '',
             scroll:'x',
+            screening: false,
             staticHead: false,
             widthTableContent:'auto',
             heightTableContent:'auto',
@@ -249,7 +250,7 @@
                 this._countRows = this.getCountRows();
                 this.init(this._rowsOnPage);
                 if(this._curInterval == undefined){
-                    this._curInterval = parseInt(this._maxPage/this._stepInterval,10);
+                    this._curInterval = parseInt(this._curPage/(this._stepInterval-1),10);
                 }
                 var html = '<div class="fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi">\
                             <span class="first buttonPadding ui-corner-tl ui-corner-bl fg-button ui-button ui-state-default">First</span>\
@@ -374,7 +375,7 @@
                 }
                 table += "</tr>";
                 var x =0;
-                var y = 0;
+                var y = this._curPage*this._rowsOnPage;
                 for (i = countColumn*this._rowsOnPage*this._curPage;i< this._Data.length && i <countColumn*this._rowsOnPage+(countColumn*this._rowsOnPage*this._curPage); i+=countColumn){
                     table += "<tr>";
                     for (var j = i;j<i + countColumn;j++){
@@ -382,7 +383,13 @@
                             value = "&nbsp;";
                         }else{
                             value = this._Data[j];
+                            if (options.screening){
+                                value+='';
+                                value = value.replace(/</g,"&lt;");
+                                value =  value.replace(/>/g,"&gt;");
+                            }
                         }
+                        
                         table+=options.getCellData(x, y, value);
                         x++;
                     } 
